@@ -10,6 +10,7 @@ export class DirectiveComponent implements OnInit {
 
   animal:Animal;
   animalList:Array<Animal>;
+  name:string='abc';
   constructor() { 
     this.animalList = [];
     this.animal = new Animal("고양이",5);
