@@ -11,7 +11,6 @@ export class DirectiveComponent implements OnInit {
   animal:Animal;
   animalList:Array<Animal>;
   constructor() { 
-    console.log("나 호출 두번되?");
     this.animalList = [];
     this.animal = new Animal("고양이",5);
     this.animalList.push(this.animal);
@@ -24,7 +23,6 @@ export class DirectiveComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("나도?");
   }
 
 }
