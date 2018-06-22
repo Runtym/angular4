@@ -1,0 +1,40 @@
+<p>
+  directive works!
+</p>
+<ul>
+  <li *ngFor="let ani of animalList">
+    {{ani.name}},{{ani.age}}
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let ani of animalList; index as i;">
+    {{i+1}}.{{animalList[i].name}},{{animalList[i].age}}
+  </li>
+</ul>
+<ul>
+  <ng-container *ngFor="let ani of animalList;even as even;">
+    <li *ngIf="even">{{ani.name}},{{ani.age}}</li>
+  </ng-container>
+</ul>
+<ul>
+    <ng-container *ngFor="let ani of animalList;odd as isOdd">
+      <li *ngIf="isOdd">{{ani.name}},{{ani.age}}</li>
+    </ng-container>
+</ul>
+<ul>
+    <ng-container *ngFor="let ani of animalList;first as isFirst">
+      <li *ngIf="isFirst">{{ani.name}},{{ani.age}}</li>
+    </ng-container>
+</ul>
+
+<ul>
+    <ng-container *ngFor="let ani of animalList;last as isLast">
+      <li *ngIf="isLast">{{ani.name}},{{ani.age}}</li>
+    </ng-container>
+</ul>
+
+<ul>
+    <ng-container *ngFor="let ani of animalList;last as isLast">
+      <li *ngIf="ani.age==2 || ani.name=='고양이'">{{ani.name}},{{ani.age}}</li>
+    </ng-container>
+</ul>
